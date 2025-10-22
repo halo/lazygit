@@ -206,6 +206,13 @@ func (self *FilesController) GetKeybindings(opts types.KeybindingsOpts) []*types
 			Tooltip:           self.c.Tr.ExpandAllTooltip,
 			GetDisabledReason: self.require(self.isInTreeMode),
 		},
+		{
+			Key:               opts.GetKey(opts.Config.Files.ToggleSubtreeExpansion),
+			Handler:           self.toggleSubtreeExpansion,
+			Description:       self.c.Tr.ToggleSubtreeExpansion,
+			Tooltip:           self.c.Tr.ToggleSubtreeExpansionTooltip,
+			GetDisabledReason: self.require(self.isInTreeMode),
+		},
 	}
 }
 
@@ -1190,6 +1197,23 @@ func (self *FilesController) handleToggleDirCollapsed() error {
 	self.c.PostRefreshUpdate(self.c.Contexts().Files)
 
 	return nil
+}
+
+func (self *FilesController) toggleSubtreeExpansion() error {
+	node := self.context().GetSelected()
+	if node == nil {
+		return nil
+	}
+
+	if node.File == nil {
+		// toggle this directory and all descendants
+		self.context().FileTreeViewModel.ToggleSubtreeExpansion(node.GetInternalPath())
+		self.c.PostRefreshUpdate(self.context())
+		return nil
+	}
+
+	// if it's a file, behave like normal enter
+	return self.EnterFile(types.OnFocusOpts{ClickedWindowName: "", ClickedViewLineIdx: -1})
 }
 
 func (self *FilesController) toggleTreeView() error {

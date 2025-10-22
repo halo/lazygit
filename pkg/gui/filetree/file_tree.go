@@ -31,6 +31,7 @@ type ITree[T any] interface {
 	SetTree()
 	IsCollapsed(path string) bool
 	ToggleCollapsed(path string)
+	ToggleSubtreeExpansion(path string)
 	CollapsedPaths() *CollapsedPaths
 	CollapseAll()
 	ExpandAll()
@@ -212,4 +213,8 @@ func (self *FileTree) CollapsedPaths() *CollapsedPaths {
 
 func (self *FileTree) GetFilter() FileTreeDisplayFilter {
 	return self.filter
+}
+
+func (self *FileTree) ToggleSubtreeExpansion(path string) {
+	ToggleSubtreeExpansionOn(self.collapsedPaths, self.tree, path)
 }

@@ -352,6 +352,7 @@ _說明：`<c-b>` 表示 Ctrl＋B、`<a-b>` 表示 Alt＋B，`B`表示 Shift＋B
 | `` f `` | 擷取 | 同步遠端異動 |
 | `` - `` | Collapse all files | Collapse all directories in the files tree |
 | `` = `` | Expand all files | Expand all directories in the file tree |
+| `` <a-enter> `` | Recursively expand/collapse the selected directory | Recursively expand/collapse the selected directory in the file tree |
 | `` 0 `` | Focus main view |  |
 | `` / `` | 搜尋 |  |
 

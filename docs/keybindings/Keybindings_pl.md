@@ -257,6 +257,7 @@ _Legenda: `<c-b>` oznacza ctrl+b, `<a-b>` oznacza alt+b, `B` oznacza shift+b_
 | `` f `` | Pobierz | Pobierz zmiany ze zdalnego serwera. |
 | `` - `` | Collapse all files | Collapse all directories in the files tree |
 | `` = `` | Expand all files | Expand all directories in the file tree |
+| `` <a-enter> `` | Recursively expand/collapse the selected directory | Recursively expand/collapse the selected directory in the file tree |
 | `` 0 `` | Focus main view |  |
 | `` / `` | Szukaj w bieżącym widoku po tekście |  |
 

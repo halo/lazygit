@@ -686,6 +686,7 @@ keybinding:
     copyFileInfoToClipboard: "y"
     collapseAll: '-'
     expandAll: =
+    toggleSubtreeExpansion: <a-enter>
   branches:
     createPullRequest: o
     viewPullRequestOptions: O

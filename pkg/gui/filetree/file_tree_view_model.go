@@ -220,3 +220,21 @@ func (self *FileTreeViewModel) ExpandAll() {
 		self.SetSelectedLineIdx(index)
 	}
 }
+
+// ToggleSubtreeExpansion toggles the collapsed/expanded state of the given path
+// and attempts to preserve selection on that path after the change.
+func (self *FileTreeViewModel) ToggleSubtreeExpansion(path string) {
+	selectedNode := self.GetSelected()
+
+	self.IFileTree.ToggleSubtreeExpansion(path)
+
+	// After changing collapsed state, try to keep selection on the same item
+	if selectedNode == nil {
+		return
+	}
+
+	index, found := self.GetIndexForPath(selectedNode.path)
+	if found {
+		self.SetSelectedLineIdx(index)
+	}
+}

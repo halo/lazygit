@@ -131,3 +131,7 @@ func (self *CommitFileTree) GetFile(path string) *models.CommitFile {
 func (self *CommitFileTree) InTreeMode() bool {
 	return self.showTree
 }
+
+func (self *CommitFileTree) ToggleSubtreeExpansion(path string) {
+	ToggleSubtreeExpansionOn(self.collapsedPaths, self.tree, path)
+}

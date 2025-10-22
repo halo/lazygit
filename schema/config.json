@@ -1142,6 +1142,10 @@
         "expandAll": {
           "type": "string",
           "default": "="
+        },
+        "toggleSubtreeExpansion": {
+          "type": "string",
+          "default": "\u003ca-enter\u003e"
         }
       },
       "additionalProperties": false,
