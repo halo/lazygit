@@ -158,6 +158,7 @@ _Legend: `<c-b>` means ctrl+b, `<a-b>` means alt+b, `B` means shift+b_
 | `` f `` | Fetch | Fetch changes from remote. |
 | `` - `` | Collapse all files | Collapse all directories in the files tree |
 | `` = `` | Expand all files | Expand all directories in the file tree |
+| `` <a-enter> `` | Recursively expand/collapse the selected directory | Recursively expand/collapse the selected directory in the file tree |
 | `` 0 `` | Focus main view |  |
 | `` / `` | Search the current view by text |  |
 

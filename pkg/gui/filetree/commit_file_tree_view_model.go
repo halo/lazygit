@@ -192,6 +192,23 @@ func (self *CommitFileTreeViewModel) ExpandAll() {
 	}
 }
 
+// ToggleSubtreeExpansion toggles the collapsed/expanded state for the given
+// path and tries to preserve selection.
+func (self *CommitFileTreeViewModel) ToggleSubtreeExpansion(path string) {
+	selectedNode := self.GetSelected()
+
+	self.ICommitFileTree.ToggleSubtreeExpansion(path)
+
+	if selectedNode == nil {
+		return
+	}
+
+	index, found := self.GetIndexForPath(selectedNode.path)
+	if found {
+		self.SetSelectedLineIdx(index)
+	}
+}
+
 // Try to select the given path if present. If it doesn't exist, or one of the parent directories is
 // collapsed, do nothing.
 // Note that filepath is an actual file path, not an internal tree path as with e.g.

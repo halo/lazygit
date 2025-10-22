@@ -510,6 +510,7 @@ type KeybindingFilesConfig struct {
 	CopyFileInfoToClipboard  string `yaml:"copyFileInfoToClipboard"`
 	CollapseAll              string `yaml:"collapseAll"`
 	ExpandAll                string `yaml:"expandAll"`
+	ToggleSubtreeExpansion   string `yaml:"toggleSubtreeExpansion"`
 }
 
 type KeybindingBranchesConfig struct {
@@ -967,6 +968,7 @@ func GetDefaultConfig() *UserConfig {
 				CopyFileInfoToClipboard:  "y",
 				CollapseAll:              "-",
 				ExpandAll:                "=",
+				ToggleSubtreeExpansion:   "<a-enter>",
 			},
 			Branches: KeybindingBranchesConfig{
 				CopyPullRequestURL:     "<c-y>",

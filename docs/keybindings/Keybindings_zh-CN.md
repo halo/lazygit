@@ -221,6 +221,7 @@ _图例：`<c-b>` 意味着ctrl+b, `<a-b>意味着Alt+b, `B` 意味着shift+b_
 | `` f `` | 抓取 | 从远程获取变更 |
 | `` - `` | 折叠全部文件 | 折叠文件树中的全部目录 |
 | `` = `` | 展开全部文件 | 展开文件树中的全部目录 |
+| `` <a-enter> `` | Recursively expand/collapse the selected directory | Recursively expand/collapse the selected directory in the file tree |
 | `` 0 `` | Focus main view |  |
 | `` / `` | 开始搜索 |  |
 

@@ -83,6 +83,7 @@ _Legend: `<c-b>` means ctrl+b, `<a-b>` means alt+b, `B` means shift+b_
 | `` f `` | Buscar | Buscar alterações do controle remoto. |
 | `` - `` | Recolher todos os arquivos | Recolher todos os diretórios na árvore de arquivos |
 | `` = `` | Expandir todos os arquivos | Expandir todos os diretórios na árvore do arquivo |
+| `` <a-enter> `` | Recursively expand/collapse the selected directory | Recursively expand/collapse the selected directory in the file tree |
 | `` 0 `` | Focus main view |  |
 | `` / `` | Search the current view by text |  |
 

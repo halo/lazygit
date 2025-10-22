@@ -240,6 +240,7 @@ _凡例：`＜c-b＞` はctrl+b、`＜a-b＞` はalt+b、`B` はshift+bを意味
 | `` f `` | フェッチ | リモートから変更をフェッチします。 |
 | `` - `` | すべてのファイルを折りたたむ | ファイルツリー内のすべてのディレクトリを折りたたみます |
 | `` = `` | すべてのファイルを展開 | ファイルツリー内のすべてのディレクトリを展開します |
+| `` <a-enter> `` | Recursively expand/collapse the selected directory | Recursively expand/collapse the selected directory in the file tree |
 | `` 0 `` | メインビューにフォーカス |  |
 | `` / `` | 現在のビューをテキストで検索 |  |
 
